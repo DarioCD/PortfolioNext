@@ -80,8 +80,5 @@ h3 {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centrar horizontalmente los componentes en el contenido */
-  padding: 20px; /* Agregar un espacio entre los componentes */
+  margin-inline: 100px;
 }

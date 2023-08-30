@@ -1,0 +1,38 @@
+.containerHabilidades {
+  background-color: var(--blurFondo);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.5s ease;
+  border-radius: 10px;
+}
+
+.containerHabilidades img {
+  width: 55px;
+  height: 55px;
+  margin: 5px;
+  padding: 10px 5px 10px 5px;
+}
+.containerImgHabilidades {
+  display: flex;
+  flex: 5 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.containerSpanHabilidades {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.tootltip {
+  background-color: var(--headerFondo);
+  padding: 5px;
+  border-radius: 5px;
+}
