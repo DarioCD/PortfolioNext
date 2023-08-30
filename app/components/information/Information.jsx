@@ -1,7 +1,7 @@
 import style from "./Information.module.css";
 
 import Image from "next/image";
-import foto from "../../assets/fotogolfo.JPG";
+import foto from "../../assets/fotogolfo.jpg"
 
 export default function Information() {
   return (

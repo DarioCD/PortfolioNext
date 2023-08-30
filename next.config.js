@@ -2,7 +2,13 @@ const nextConfig = {
   experimental: {
     appDir: true
   },
+  output: "export",
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  distDir: "dist",
   reactStrictMode: true,
+  reactStrictMode: true,
+  images: { unoptimized: true },
 
   webpack: (config, { isServer }) => {
     // Agregar una regla para manejar archivos PDF
