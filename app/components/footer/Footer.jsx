@@ -2,7 +2,7 @@ import style from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <div className={style.footer}>
+    <div className={style.footer} id="ContactMe">
       <h1>Contacta conmigo</h1>
       <div className={style.containerFooter}>
         <div>

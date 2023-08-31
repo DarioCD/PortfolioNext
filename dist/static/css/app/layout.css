@@ -47,7 +47,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Asegura que el contenido ocupe al menos el alto completo de la ventana */
   margin: 0;
   padding: 0;
 }
@@ -69,7 +68,7 @@ h1 {
 }
 
 span,
-h2 {
+h2, a, p, small, h3 {
   color: var(--colorLetras);
   transition: color 0.5s ease;
 }
@@ -90,4 +89,26 @@ h3 {
 
 * {
   box-sizing: border-box;
+}
+
+.dropdownMenu ul li,
+a {
+  color: var(--colorLetras);
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  cursor: pointer;
+  transition: text-shadow 0.3s, font-size 0.3s, margin-inline 0.3s;
+}
+
+.dropdownMenu ul li:hover a {
+  text-shadow: 0 0 5px rgba(255, 0, 0, 1);
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.dropdownItem span, a span {
+  max-width: 150px;
+  margin-left: 10px;
+  transition: var(--speed);
 }

@@ -71,7 +71,7 @@
 
 .footerEmail a {
   color: var(--colorLetras);
-  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
   font-size: 20px;
 }
 
@@ -81,7 +81,7 @@
 
 .footerEmail p {
   color: var(--colorLetras);
-  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
   font-size: 20px;
   margin: 0px;
 }

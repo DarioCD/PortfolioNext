@@ -28,7 +28,8 @@
 .highlightable {
   position: relative;
   cursor: pointer;
-  transition: text-shadow 0.3s, font-size 0.3s, margin-inline 0.3s;
+  transition: text-shadow 0.3s, font-size 0.3s, margin-inline 0.3s,
+    color 0.5s ease;
 }
 
 .highlightable:hover {
@@ -151,4 +152,121 @@
 
 .input:checked + .slider:before {
   transform: translateX(30px);
+}
+
+.headerNombre {
+  color: var(--colorLetras);
+  transition: color 0.5s ease;
+  margin-left: 10px;
+}
+
+/* Desplegable */
+
+.menuContainer {
+  margin-right: 10px;
+}
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: var(--colorLetras);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out, background 0.5s ease;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-50%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  top: 0;
+  left: 5px;
+  transform: rotate(405deg);
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  top: 28px;
+  left: 5px;
+  transform: rotate(-405deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 90px;
+  right: 10px;
+  background-color: var(--blurFondoHeader);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.5s ease;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  width: 250px;
+}
+
+.dropdownMenu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+}
+
+.dropdownMenu.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+}
+
+.dropdownItem {
+  display: flex;
+  margin: 10px auto;
+}
+
+.dropdownItem img {
+  max-width: 20px;
+  margin-right: 10px;
+  opacity: 0.5;
+  transition: var(--speed);
+}
+
+@media (max-width: 800px) {
+  .header {
+    background-color: var(--headerFondo);
+    transition: background-color 0.5s ease;
+    height: 80px;
+  }
 }

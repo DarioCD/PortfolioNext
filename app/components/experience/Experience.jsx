@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Expereince() {
   return (
     <>
-      <h1 id="Experiencia">Experiencia</h1>
+      <h1 id="Experience">Experiencia</h1>
       <div className={style.timeline}>
         <div className={`${style.container} ${style.leftContainer}`}>
           <Image src={salesianos} alt="foto" />
