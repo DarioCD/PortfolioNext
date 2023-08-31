@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         <title>Portfolio - Darío Chinea Delgado</title>
       </head>
       <body>
-        <div className="content">{children}</div>
+        <div>{children}</div>
       </body>
     </html>
   );

@@ -16,6 +16,7 @@
   --border-radius: 8px;
   --speed: 500ms;
   --headerFondo: #0e0f17;
+  --colorEmail: lightblue;
 }
 
 .dark-mode {
@@ -30,6 +31,7 @@
   --email: url("../app/assets/correo-electronico.png");
   --phone: url("../app/assets/telefono.png");
   --headerFondo: white;
+  --colorEmail: rgb(17, 99, 126);
 }
 
 body {
@@ -81,4 +83,8 @@ h3 {
 
 .content {
   margin-inline: 100px;
+}
+
+* {
+  box-sizing: border-box;
 }

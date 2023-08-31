@@ -1,3 +1,177 @@
+
 .footer {
-  background-color: red;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  background-color: var(--blurFondo);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.5s ease;
+  flex-direction: column;
+}
+
+.footer h1 {
+  margin-top: 20px;
+}
+
+.footerEmail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.containerFooter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+.cardFooter {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(181, 181, 181 0.055);
+  flex-direction: row;
+}
+.fotoEmail {
+  width: 70px;
+  height: 70px;
+  background-image: var(--email);
+  background-size: cover;
+  transition: background-image 0.5s ease;
+  margin-right: 10px;
+}
+
+.conatinerFooterEmail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-inline: 20px;
+  margin-block: 10px;
+}
+
+.conatinerFooterEmail:nth-child(1) {
+  animation: pulseAnimation 2s infinite;
+}
+
+@keyframes pulseAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.footerEmail a {
+  color: var(--colorLetras);
+  transition: background-color 0.5s ease;
+  font-size: 20px;
+}
+
+.footerEmail a:hover {
+  color: var(--colorEmail);
+}
+
+.footerEmail p {
+  color: var(--colorLetras);
+  transition: background-color 0.5s ease;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.fotoPhone {
+  width: 70px;
+  height: 70px;
+  background-image: var(--phone);
+  background-size: cover;
+  transition: background-image 0.5s ease;
+  margin-right: 10px;
+}
+
+.containerTextoFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.containerTextoFooter small {
+  color: grey;
+  font-size: 19px;
+}
+
+.headerNombre {
+  color: var(--colorLetras);
+  transition: color 0.5s ease;
+  margin-left: 10px;
+}
+
+.containerLanguaje {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.socialContainer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: black;
+  transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 30px;
+  height: 30px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

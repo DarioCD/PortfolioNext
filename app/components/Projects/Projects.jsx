@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Projects() {
   return (
     <div className={style.containerProyectos} id="Proyectos">
-      <h2>Proyectos</h2>
+      <h1>Proyectos</h1>
       <p className={style.containerProyectosp}>
         En este espacio, encontrarás una muestra de mis trabajos
       </p>

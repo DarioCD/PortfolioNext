@@ -40,21 +40,21 @@ export default function HomePage() {
   // }, []);
 
   return (
-    <div>
+    <>
       <Header
         languaje={languaje}
         setLanguaje={setLanguaje}
         isScrolled={isScrolled}
         // windowWidth={windowWidth}
       />
-      <>
+      <div className="content">
         <Information />
         <Skills />
         <AboutMe />
         <Projects />
         <Expereince />
-      </>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
