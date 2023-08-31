@@ -5,10 +5,10 @@
   --blurFondo: rgba(31, 31, 31, 0.5);
   --textGrandeColor: linear-gradient(rgba(255, 0, 0, 1) 0%,
       rgba(255, 132, 0, 1) 100%);
-  --github: url("/my-app/app/assets/github.png");
-  --link: url("/my-app/app/assets/link.png");
-  --email: url("/my-app/app/assets/correo-electronico_2.png");
-  --phone: url("/my-app/app/assets/telefono_2.png");
+  --github: url("../app/assets/github.png");
+  --link: url("../app/assets/link.png");
+  --email: url("../app/assets/correo-electronico_2.png");
+  --phone: url("../app/assets/telefono_2.png");
   --primary-bg: #242526;
   --secondary-bg: #fff;
   --primary-text-color: #555;
@@ -25,10 +25,10 @@
   --blurFondo: rgba(181, 181, 181, 0.5);
   --textGrandeColor: linear-gradient(rgba(255, 0, 0, 1) 0%,
       rgba(138, 0, 0, 1) 100%);
-  --github: url("/my-app/app/assets/github_negro.png");
-  --link: url("/my-app/app/assets/link_negro.png");
-  --email: url("/my-app/app/assets/correo-electronico.png");
-  --phone: url("/my-app/app/assets/telefono.png");
+  --github: url("../app/assets/github_negro.png");
+  --link: url("../app/assets/link_negro.png");
+  --email: url("../app/assets/correo-electronico.png");
+  --phone: url("../app/assets/telefono.png");
   --headerFondo: white;
 }
 

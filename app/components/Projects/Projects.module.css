@@ -1,0 +1,109 @@
+.containerProyectos {
+  margin-top: 10rem;
+}
+
+.containerProyectosp {
+  margin-bottom: 3rem;
+}
+.containerCardProyectos {
+  grid-gap: 5rem;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  height: auto;
+  width: 100%;
+  justify-items: center;
+}
+
+.containerProyectos h2 {
+  background-image: var(--textGrandeColor);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-image 0.5s ease;
+}
+
+.containerProyectos p {
+  color: var(--colorLetras);
+  max-width: 600px;
+}
+.fotoProyecto {
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+}
+.cardProyecto {
+  border-radius: 20px;
+  display: flex;
+  padding: 20px;
+  background-color: var(--blurFondo);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  justify-content: space-between;
+  transition: transform 0.3s ease, background-color 0.5s ease;
+}
+.cardProyecto:hover {
+  transform: scale(1.05);
+}
+.infoProyecto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: 20px;
+}
+
+.cardProyecto h3 {
+  color: var(--colorLetras);
+}
+
+.cardProyectoEnalce {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.aEnlace {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.highlightableProyecto {
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding-block: 5px;
+  padding-inline: 20px;
+  border-radius: 5px;
+}
+
+.highlightableProyecto:hover {
+  background-color: var(--blurFondo);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+}
+
+.fotoEnlace {
+  margin-left: 10px;
+  width: 40px;
+}
+
+.fotoEnlaceGit {
+  margin-left: 10px;
+  width: 40px;
+  height: 40px; /* Asegurarse de especificar una altura */
+  background-image: var(--github); /* Ajusta la ruta aquí */
+  background-size: cover;
+  transition: background-image 0.5s ease;
+}
+
+.fotoEnlaceLink {
+  margin-left: 10px;
+  width: 40px;
+  height: 40px; /* Asegurarse de especificar una altura */
+  background-image: var(--link); /* Ajusta la ruta aquí */
+  background-size: cover;
+  transition: background-image 0.5s ease;
+}

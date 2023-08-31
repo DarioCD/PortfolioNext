@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
-import Expereince from "./components/experience/Expereince";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Information from "./components/information/Information";
 import Skills from "./components/skills/Skills";
+import Expereince from "./components/experience/Experience";
 
 export default function HomePage() {
   const [languaje, setLanguaje] = useState(true);
