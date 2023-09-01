@@ -35,7 +35,7 @@ export default function Header({
     >
       {windowWidth > 800 ? (
         <>
-          <ChangeLanguaje languaje={languaje} setLanguaje={setLanguaje} />
+          {/* <ChangeLanguaje languaje={languaje} setLanguaje={setLanguaje} /> */}
           <div className={style.containerHeader}>
             <span
               className={style.highlightable}
@@ -67,9 +67,9 @@ export default function Header({
             >
               Contacto
             </span>
-            <a href={cvPdf} download={"CV_Dario_Chinea_Delgado.pdf"}>
+            {/* <a href={cvPdf} download={"CV_Dario_Chinea_Delgado.pdf"}>
               <span className={style.highlightable}>Descargar CV</span>
-            </a>
+            </a> */}
           </div>
           <DarkLightMode windowWidth={windowWidth}/>
         </>
@@ -115,13 +115,13 @@ export default function Header({
                 <DropdownItem text={"Contacto"} />
               </ul>
               <DarkLightMode windowWidth={windowWidth}/>
-              <ul>
+              {/* <ul>
                 <li>
                   <a href={cvPdf} download={"CV - Darío Chinea Delgado"}>
                     <span>Descargar CV</span>
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </>
