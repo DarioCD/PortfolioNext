@@ -3,7 +3,7 @@ import style from "./Information.module.css";
 import Image from "next/image";
 import foto from "../../assets/fotogolfo.jpg";
 
-export default function Information() {
+export default function Information({ windowWidth }) {
   return (
     <div className={style.containerGlobal} id="Start">
       <div className={style.container}>
@@ -61,9 +61,11 @@ export default function Information() {
           </div>
         </div>
       </div>
-      <div className={style.fotoCodgio}>
-        <Image src={foto} alt="foto de código" priority />
-      </div>
+      {windowWidth > 800 && (
+        <div className={style.fotoCodgio}>
+          <Image src={foto} alt="foto de código" priority />
+        </div>
+      )}
     </div>
   );
 }

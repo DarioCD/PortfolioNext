@@ -36,3 +36,15 @@
   padding: 5px;
   border-radius: 5px;
 }
+
+@media (max-width: 800px) {
+  .containerHabilidades {
+    background-color: var(--blurFondo);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: background-color 0.5s ease;
+  }
+}

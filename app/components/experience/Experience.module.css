@@ -142,3 +142,47 @@
   left: -14px;
   transition: border-right 0.5s ease;
 }
+
+@media screen and (max-width: 900px) {
+  .timeline {
+    margin: 50px auto;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .container,
+  .container:nth-child(2) {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 0px;
+  }
+
+  .textBox {
+    font-size: 13px;
+  }
+  .textBox small {
+    margin-bottom: 10px;
+  }
+  .rightContainer {
+    left: 0;
+  }
+
+  .leftContainer img,
+  .rightContainer img {
+    left: 10px;
+  }
+
+  .leftArrowContainer,
+  .rightArrowContainer {
+    border-right: 15px solid var(--blurFondo);
+    border-left: 0;
+    left: -14px;
+  }
+
+  .containerLanguaje {
+    margin-left: 10px;
+  }
+  .containerHeaderSpan {
+    gap: 15px;
+  }
+}

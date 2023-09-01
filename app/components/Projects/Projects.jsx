@@ -1,7 +1,7 @@
 import style from "./Projects.module.css";
 import foto from "../../assets/coming-soon.jpg";
 import Image from "next/image";
-export default function Projects() {
+export default function Projects({ windowWidth }) {
   return (
     <div className={style.containerProyectos} id="Projects">
       <h1>Proyectos</h1>
@@ -43,6 +43,9 @@ export default function Projects() {
       </div>
       <div className={style.containerCardProyectos}>
         <div className={style.cardProyecto}>
+          {windowWidth <= 1100 && (
+            <Image src={foto} alt="foto" className={style.fotoProyecto} />
+          )}
           <div className={style.infoProyecto}>
             <h3>Fight Club</h3>
             <p>
@@ -71,7 +74,9 @@ export default function Projects() {
               </a>
             </div>
           </div>
-          <Image src={foto} alt="foto" className={style.fotoProyecto} />
+          {windowWidth > 1100 && (
+            <Image src={foto} alt="foto" className={style.fotoProyecto} />
+          )}
         </div>
       </div>
       <div className={style.containerCardProyectos}>
@@ -109,6 +114,9 @@ export default function Projects() {
       </div>
       <div className={style.containerCardProyectos}>
         <div className={style.cardProyecto}>
+          {windowWidth <= 1100 && (
+            <Image src={foto} alt="foto" className={style.fotoProyecto} />
+          )}
           <div className={style.infoProyecto}>
             <h3>Fight Club</h3>
             <p>
@@ -137,7 +145,9 @@ export default function Projects() {
               </a>
             </div>
           </div>
-          <Image src={foto} alt="foto" className={style.fotoProyecto} />
+          {windowWidth > 1100 && (
+            <Image src={foto} alt="foto" className={style.fotoProyecto} />
+          )}
         </div>
       </div>
     </div>

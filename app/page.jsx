@@ -13,19 +13,21 @@ export default function HomePage() {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const [windowWidth, setWindowWidth] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(800);
 
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 0);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    if (windowWidth > 800) {
+      window.addEventListener("scroll", handleScroll);
+      handleScroll();
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [windowWidth]);
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -49,14 +51,14 @@ export default function HomePage() {
         isScrolled={isScrolled}
         windowWidth={windowWidth}
       />
-      {/* <div className="content">
+      <div className="content">
         <Information windowWidth={windowWidth} />
         <Skills windowWidth={windowWidth} />
         <AboutMe windowWidth={windowWidth} />
         <Projects windowWidth={windowWidth} />
         <Expereince windowWidth={windowWidth} />
-      </div> */}
-      {/* <Footer /> */}
+      </div>
+      <Footer />
     </>
   );
 }

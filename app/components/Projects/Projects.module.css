@@ -107,3 +107,24 @@
   background-size: cover;
   transition: background-image 0.5s ease;
 }
+
+@media (max-width: 800px) {
+  .cardProyectoEnalce {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .cardProyecto:hover {
+    transform: scale(1.02);
+  }
+  .cardProyecto {
+    flex-direction: column;
+  }
+
+  .fotoProyecto {
+    width: 100%;
+  }
+}

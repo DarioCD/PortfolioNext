@@ -33,7 +33,7 @@ export default function Header({
       className={`${style.header} ${isScrolled ? style.scrolled : ""}`}
       id="header"
     >
-      {windowWidth >= 800 || windowWidth === null ? (
+      {windowWidth > 800 ? (
         <>
           <ChangeLanguaje languaje={languaje} setLanguaje={setLanguaje} />
           <div className={style.containerHeader}>
