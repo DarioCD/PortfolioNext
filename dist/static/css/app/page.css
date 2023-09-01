@@ -628,6 +628,35 @@
   transition: var(--speed);
 }
 
+.Header_dropdownMenu__HuSzc ul li {
+  color: var(--colorLetras);
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  cursor: pointer;
+  transition: text-shadow 0.3s, font-size 0.3s, margin-inline 0.3s;
+}
+
+.Header_dropdownMenu__HuSzc ul li a span {
+  margin-left: 10px;
+}
+
+.Header_dropdownItem__AeIf7 span {
+  max-width: 150px;
+  margin-left: 10px;
+  transition: var(--speed);
+}
+
+.Header_dropdownItem__AeIf7 ul li a span {
+  max-width: 150px;
+  margin-left: 10px;
+  transition: var(--speed);
+}
+.Header_dropdownItem__AeIf7:hover {
+  text-shadow: 0 0 5px rgba(255, 0, 0, 1);
+  cursor: pointer;
+}
+
 @media (max-width: 800px) {
   .Header_header__It600 {
     background-color: var(--headerFondo);
@@ -635,6 +664,7 @@
     height: 80px;
   }
 }
+
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./app/components/information/Information.module.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************/

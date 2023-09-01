@@ -2,7 +2,7 @@ import style from "./Header.module.css";
 import cvPdf from "../../assets/CV.pdf";
 import ChangeLanguaje from "./utils/ChangeLanguaje";
 import DarkLightMode from "./utils/DarkLightMode";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Header({
   languaje,
@@ -10,6 +10,8 @@ export default function Header({
   isScrolled,
   windowWidth,
 }) {
+
+  const [open, setOpen] = useState(false);
 
   let menuRef = useRef();
 
@@ -31,7 +33,7 @@ export default function Header({
       className={`${style.header} ${isScrolled ? style.scrolled : ""}`}
       id="header"
     >
-      {windowWidth > 800 ? (
+      {windowWidth >= 800 || windowWidth === null ? (
         <>
           <ChangeLanguaje languaje={languaje} setLanguaje={setLanguaje} />
           <div className={style.containerHeader}>
@@ -69,10 +71,10 @@ export default function Header({
               <span className={style.highlightable}>Descargar CV</span>
             </a>
           </div>
-          <DarkLightMode />
+          <DarkLightMode windowWidth={windowWidth}/>
         </>
       ) : (
-        <div>
+        <>
           <p onClick={() => scrollToSection("Start")} className={style.headerNombre}>
             Dario chinea delgado
           </p>
@@ -112,15 +114,7 @@ export default function Header({
               <ul onClick={() => scrollToSection("ContactMe")}>
                 <DropdownItem text={"Contacto"} />
               </ul>
-              {/* {darkMode ? (
-                <ul onClick={toggleDarkMode}>
-                  <DropdownItem text={"Modo oscuro"} />
-                </ul>
-              ) : (
-                <ul onClick={toggleDarkMode}>
-                  <DropdownItem text={"Modo claro"} />
-                </ul>
-              )} */}
+              <DarkLightMode windowWidth={windowWidth}/>
               <ul>
                 <li>
                   <a href={cvPdf} download={"CV - Darío Chinea Delgado"}>
@@ -130,7 +124,7 @@ export default function Header({
               </ul>
             </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

@@ -13,7 +13,7 @@ export default function HomePage() {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(null);
 
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 0);
@@ -27,17 +27,19 @@ export default function HomePage() {
     };
   }, []);
 
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
   useEffect(() => {
+    setWindowWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowWidth]);
+  }, []);
 
   return (
     <>
